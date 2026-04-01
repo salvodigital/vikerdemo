@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKER Car Wellness & Spa — Zabezpieczenie lakieru, Renowacja, Pielęgnacja | Stare Babice</title>
+    <meta name="description" content="Profesjonalne studio auto detailingu pod Warszawą. Folia PPF, powłoki ceramiczne, korekta lakieru, przyciemnianie szyb. Perfekcja w każdym detalu.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="VIKER Car Wellness & Spa — Zabezpieczenie lakieru, Renowacja, Pielęgnacja">
+    <meta property="og:description" content="Profesjonalne studio auto detailingu pod Warszawą. Folia PPF, powłoki ceramiczne, korekta lakieru, przyciemnianie szyb. Perfekcja w każdym detalu.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --color-bg-primary:    #0A0A0A;
+            --color-bg-secondary:  #111111;
+            --color-bg-card:       #1A1A1A;
+            --color-accent:        #FFFFFF;
+            --color-accent-gold:   #CCCCCC;
+            --color-text-primary:  #F0F0F0;
+            --color-text-secondary:#888888;
+            --color-text-accent:   #FFFFFF;
+            --color-border:        #222222;
+
+            --font-heading: 'Bebas Neue', cursive;
+            --font-body:    'Source Sans 3', sans-serif;
+
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+
+            --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+            --transition-fast:   0.3s var(--ease);
+            --transition-smooth: 0.6s var(--ease);
+            --transition-slow:   0.8s var(--ease);
+
+            --radius: 6px;
+            --max-width: 1200px;
+        }
+
+        /* ===== RESET ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        button { font-family: var(--font-body); }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            letter-spacing: 0.05em;
+            line-height: 1.05;
+        }
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .section-desc {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            max-width: 620px;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        section { padding: var(--spacing-xl) 0; }
+
+        /* ===== ACCENT LINE ===== */
+        .accent-line {
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-gold));
+            width: 0;
+            transition: width 1s var(--ease);
+            margin-bottom: var(--spacing-md);
+        }
+        .accent-line.grow { width: 180px; }
+        .accent-line--center { margin-left: auto; margin-right: auto; }
+
+        /* ===== SECTION DIVIDER ===== */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            min-height: 48px;
+            border-radius: var(--radius);
+            white-space: nowrap;
+        }
+        .btn:active { transform: scale(0.97) !important; }
+        .btn--primary {
+            background: #FFFFFF;
+            color: #000;
+        }
+        .btn--primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 35px rgba(255,255,255,0.15);
+        }
+        .btn--outline {
+            background: transparent;
+            color: var(--color-text-primary);
+            border: 1.5px solid rgba(240,240,240,0.25);
+        }
+        .btn--outline:hover {
+            transform: scale(1.05);
+            border-color: #fff;
+            color: #fff;
+            box-shadow: 0 10px 35px rgba(255,255,255,0.10);
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity var(--transition-slow), transform var(--transition-slow);
+        }
+        .reveal.visible,
+        .reveal-left.visible,
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        .d1 { transition-delay: 0.1s; }
+        .d2 { transition-delay: 0.25s; }
+        .d3 { transition-delay: 0.4s; }
+        .d4 { transition-delay: 0.55s; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            padding: 1.4rem 0;
+            transition: background var(--transition-fast), padding var(--transition-fast), border-color var(--transition-fast);
+            border-bottom: 1px solid transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(10,10,10,0.96);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 0.9rem 0;
+            border-color: var(--color-border);
+        }
+        .navbar__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar__logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.9rem;
+            letter-spacing: 0.12em;
+        }
+        .navbar__logo-text .dot { color: var(--color-accent); }
+        .navbar__links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .navbar__links a {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-text-secondary);
+            transition: color var(--transition-fast);
+            padding: 0.4rem 0;
+        }
+        .navbar__links a:hover { color: var(--color-text-primary); }
+        .navbar__cta-link {
+            background: #FFFFFF !important;
+            color: #000 !important;
+            padding: 0.55rem 1.2rem !important;
+            border-radius: var(--radius);
+            transition: box-shadow var(--transition-fast), transform var(--transition-fast) !important;
+        }
+        .navbar__cta-link:hover {
+            box-shadow: 0 6px 24px rgba(255,255,255,0.15);
+            transform: translateY(-1px);
+            color: #000 !important;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--color-text-primary);
+            transition: all var(--transition-fast);
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(10,10,10,0.99);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            transform: translateX(100%);
+            transition: transform var(--transition-smooth);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-menu a {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.4s ease, transform 0.4s ease, color var(--transition-fast);
+        }
+        .mobile-menu.open a { opacity: 1; transform: translateX(0); }
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.08s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.14s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.20s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.26s; }
+        .mobile-menu.open a:nth-child(5) { transition-delay: 0.32s; }
+        .mobile-menu.open a:nth-child(6) { transition-delay: 0.38s; }
+        .mobile-menu a:hover { color: var(--color-accent); }
+        .mobile-menu a.accent-link { color: var(--color-accent); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #0A0A0A;
+        }
+        /* Subtelny statyczny glow po prawej stronie hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: radial-gradient(ellipse at 70% 40%, rgba(255,255,255,0.03) 0%, transparent 60%);
+        }
+        /* Kontener lewitujących logotypów V */
+        .hero__floating-logos {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        /* mix-blend-mode: screen — czarne piksele tła stają się przezroczyste,
+           biała litera V zostaje widoczna bez żadnego tła */
+        .hero__float-v {
+            position: absolute;
+            mix-blend-mode: screen;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            will-change: transform;
+        }
+
+        /* — LEWA STRONA — */
+
+        /* Logo L1: duże, lewy górny róg */
+        .hero__float-v--1 {
+            width: 240px;
+            top: -30px;
+            left: -20px;
+            opacity: 0.22;
+            transform: rotate(-10deg);
+            animation-name: floatV1;
+            animation-duration: 12s;
+            animation-delay: 0s;
+        }
+        @keyframes floatV1 {
+            0%   { transform: rotate(-10deg) translate(0, 0); }
+            100% { transform: rotate(-10deg) translate(40px, 30px); }
+        }
+
+        /* Logo L2: małe, lewa krawędź, środek */
+        .hero__float-v--2 {
+            width: 120px;
+            top: 42%;
+            left: 3%;
+            opacity: 0.16;
+            transform: rotate(8deg);
+            animation-name: floatV2;
+            animation-duration: 10s;
+            animation-delay: -4s;
+        }
+        @keyframes floatV2 {
+            0%   { transform: rotate(8deg) translate(0, 0); }
+            100% { transform: rotate(8deg) translate(35px, -25px); }
+        }
+
+        /* Logo L3: małe, lewy dolny róg */
+        .hero__float-v--3 {
+            width: 150px;
+            bottom: -20px;
+            left: 8%;
+            opacity: 0.18;
+            transform: rotate(-6deg);
+            animation-name: floatV3;
+            animation-duration: 14s;
+            animation-delay: -7s;
+        }
+        @keyframes floatV3 {
+            0%   { transform: rotate(-6deg) translate(0, 0); }
+            100% { transform: rotate(-6deg) translate(45px, -20px); }
+        }
+
+        /* — PRAWA STRONA — */
+
+        /* Logo R1: największe, prawy środek — dominujący element */
+        .hero__float-v--4 {
+            width: 280px;
+            top: 38%;
+            right: 4%;
+            opacity: 0.22;
+            transform: rotate(10deg);
+            animation-name: floatV4;
+            animation-duration: 11s;
+            animation-delay: -2s;
+        }
+        @keyframes floatV4 {
+            0%   { transform: rotate(10deg) translate(0, 0); }
+            100% { transform: rotate(10deg) translate(-50px, 30px); }
+        }
+
+        /* Logo R2: średnie, prawy górny róg */
+        .hero__float-v--5 {
+            width: 160px;
+            top: 2%;
+            right: 3%;
+            opacity: 0.16;
+            transform: rotate(-14deg);
+            animation-name: floatV5;
+            animation-duration: 9s;
+            animation-delay: -5s;
+        }
+        @keyframes floatV5 {
+            0%   { transform: rotate(-14deg) translate(0, 0); }
+            100% { transform: rotate(-14deg) translate(-40px, 25px); }
+        }
+
+        /* Logo R3: małe, prawy dolny róg */
+        .hero__float-v--6 {
+            width: 130px;
+            bottom: 5%;
+            right: 6%;
+            opacity: 0.18;
+            transform: rotate(18deg);
+            animation-name: floatV6;
+            animation-duration: 13s;
+            animation-delay: -9s;
+        }
+        @keyframes floatV6 {
+            0%   { transform: rotate(18deg) translate(0, 0); }
+            100% { transform: rotate(18deg) translate(-35px, -30px); }
+        }
+
+        /* Logo C: małe, górna środkowa krawędź — łączy obie strony */
+        .hero__float-v--7 {
+            width: 100px;
+            top: 5%;
+            left: 44%;
+            opacity: 0.12;
+            transform: rotate(-5deg);
+            animation-name: floatV7;
+            animation-duration: 16s;
+            animation-delay: -6s;
+        }
+        @keyframes floatV7 {
+            0%   { transform: rotate(-5deg) translate(0, 0); }
+            100% { transform: rotate(-5deg) translate(30px, 20px); }
+        }
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            padding: calc(90px + 3rem) 0 5rem;
+            will-change: transform;
+        }
+
+        /* Hero animations — all triggered on load */
+        .hero__badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.28em;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.7s var(--ease) forwards 0.4s;
+        }
+        .hero__logo-wrap {
+            margin-bottom: 1.25rem;
+            opacity: 0;
+            animation: fadeIn 0.8s var(--ease) forwards 0.3s;
+        }
+        .hero__logo-text {
+            font-family: var(--font-heading);
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            letter-spacing: 0.18em;
+            color: rgba(240,240,240,0.85);
+        }
+        .hero__logo-text .hl { color: var(--color-accent); }
+        .hero__title {
+            font-size: clamp(3.5rem, 9vw, 7.5rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            clip-path: inset(0 100% 0 0);
+            animation: wipeReveal 1s var(--ease) forwards 0.85s;
+        }
+        @keyframes wipeReveal {
+            to { clip-path: inset(0 0% 0 0); }
+        }
+        .hero__accent-bar {
+            height: 2px;
+            width: 0;
+            background: linear-gradient(90deg, #FFFFFF, #CCCCCC);
+            margin: 1.5rem 0;
+            animation: barGrow 0.9s var(--ease) forwards 1.7s;
+        }
+        @keyframes barGrow { to { width: 210px; } }
+        .hero__sub {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--color-text-secondary);
+            margin-bottom: 0.4rem;
+            opacity: 0;
+            animation: fadeUp 0.7s var(--ease) forwards 1.5s;
+        }
+        .hero__location {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2.5rem;
+            opacity: 0.7;
+            opacity: 0;
+            animation: fadeUp 0.7s var(--ease) forwards 1.7s;
+        }
+        .hero__actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.7s var(--ease) forwards 1.9s;
+        }
+        .hero__scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 2.8s;
+        }
+        .hero__scroll-hint span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--color-text-secondary);
+        }
+        .hero__scroll-line {
+            width: 1px;
+            height: 44px;
+            background: linear-gradient(to bottom, #FFFFFF, transparent);
+            animation: scrollPulse 2.2s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(1); }
+            50%       { opacity: 1;   transform: scaleY(1.15); }
+        }
+
+        @keyframes fadeIn  { to { opacity: 1; } }
+        @keyframes fadeUp  {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SERVICES ===== */
+        .services { background: var(--color-bg-secondary); }
+        .services__header { text-align: center; margin-bottom: 3.5rem; }
+        .services__header .section-desc { margin: 0 auto; text-align: center; }
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-fast);
+        }
+        .service-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 24px 64px rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.22); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card__icon {
+            width: 58px;
+            height: 58px;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+        }
+        .service-card__icon svg { width: 100%; height: 100%; }
+        .service-card__en {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--color-accent);
+            margin-bottom: 0.4rem;
+        }
+        .service-card__title {
+            font-size: 2.1rem;
+            margin-bottom: 1rem;
+        }
+        .service-card__desc {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+        .service-card__list { display: flex; flex-direction: column; gap: 0.55rem; }
+        .service-card__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+        .service-card__list li::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            margin-top: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        /* ===== ABOUT ===== */
+        .about { background: var(--color-bg-primary); }
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        .about__text .section-desc { max-width: 100%; margin-bottom: 1.2rem; }
+        .about__image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        .about__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .about__image:hover img { transform: scale(1.04); }
+        .about__image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius);
+            pointer-events: none;
+        }
+
+        /* Trust counters */
+        .trust-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--color-border);
+        }
+        .trust-item { text-align: center; }
+        .trust-item__num {
+            font-family: var(--font-heading);
+            font-size: clamp(2.8rem, 4.5vw, 4rem);
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+        .trust-item__label {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery { background: var(--color-bg-secondary); }
+        .gallery__header { text-align: center; margin-bottom: 3.5rem; }
+        .gallery__header .section-desc { margin: 0 auto; text-align: center; }
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 360px;
+            gap: 10px;
+        }
+        .gallery__item {
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            clip-path: inset(100% 0 0 0);
+            transition: clip-path var(--transition-slow);
+        }
+        .gallery__item.visible { clip-path: inset(0 0 0 0); }
+        .gallery__item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s var(--ease), filter 0.4s ease;
+            filter: brightness(0.88);
+        }
+        .gallery__item:hover img { transform: scale(1.06); filter: brightness(1.0); }
+        .gallery__item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.38) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .gallery__footer { text-align: center; margin-top: 2.5rem; }
+        .gallery__ig-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--color-accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.88rem;
+            transition: gap var(--transition-fast);
+        }
+        .gallery__ig-link:hover { gap: 1.1rem; }
+        .gallery__ig-link svg { width: 18px; height: 18px; transition: transform var(--transition-fast); }
+        .gallery__ig-link:hover svg { transform: translateX(4px); }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials { background: var(--color-bg-primary); }
+        .testimonials__header { text-align: center; margin-bottom: 3.5rem; }
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .testimonial-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            position: relative;
+        }
+        .testimonial-card:hover {
+            border-color: rgba(255,255,255,0.18);
+            box-shadow: 0 12px 44px rgba(255,255,255,0.06);
+        }
+        .testimonial-card__quote {
+            font-size: 4rem;
+            line-height: 0.6;
+            color: var(--color-accent);
+            opacity: 0.55;
+            font-family: Georgia, serif;
+            margin-bottom: 1rem;
+        }
+        .testimonial-card__stars { display: flex; gap: 3px; margin-bottom: 1rem; }
+        .testimonial-card__stars span { color: var(--color-accent-gold); font-size: 1rem; }
+        .testimonial-card__text {
+            font-size: 0.98rem;
+            color: var(--color-text-primary);
+            line-height: 1.75;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-card__author {
+            font-size: 0.78rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-weight: 700;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact { background: var(--color-bg-secondary); }
+        .contact__header { text-align: center; margin-bottom: 3.5rem; }
+        .contact__header .section-desc { margin: 0 auto; text-align: center; }
+        .contact__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .contact__info { display: flex; flex-direction: column; gap: 2rem; }
+        .contact__row {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .contact__icon-wrap {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius);
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+        }
+        .contact__icon-wrap svg { width: 22px; height: 22px; }
+        .contact__row-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--color-accent);
+            margin-bottom: 0.3rem;
+        }
+        .contact__row-value {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            line-height: 1.5;
+        }
+        .contact__row-value a { transition: color var(--transition-fast); }
+        .contact__row-value a:hover { color: var(--color-accent); }
+        .phone-big {
+            font-size: 1.5rem !important;
+            color: var(--color-accent) !important;
+        }
+        .contact__row-sub {
+            font-size: 0.88rem;
+            color: var(--color-text-secondary);
+            margin-top: 0.25rem;
+        }
+        .contact__social-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            background: var(--color-bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-secondary);
+            transition: all var(--transition-fast);
+        }
+        .social-btn svg { width: 22px; height: 22px; }
+        .social-btn:hover {
+            background: #FFFFFF;
+            border-color: #FFFFFF;
+            color: #000;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.12);
+        }
+        .contact__map-wrap {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+        .contact__map-wrap iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            filter: invert(90%) hue-rotate(180deg) brightness(0.88) saturate(1.15);
+            display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #060606;
+            border-top: 1px solid var(--color-border);
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+        }
+        .footer__top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: var(--spacing-md);
+        }
+        .footer__brand-name {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.5rem;
+        }
+        .footer__brand-name span { color: var(--color-accent); }
+        .footer__tagline {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+        .footer__col h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+        }
+        .footer__nav-list { display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer__nav-list a {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            transition: color var(--transition-fast);
+        }
+        .footer__nav-list a:hover { color: var(--color-accent); }
+        .footer__contact-list { display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer__contact-list p { font-size: 0.9rem; color: var(--color-text-secondary); }
+        .footer__contact-list a { color: var(--color-accent); transition: opacity var(--transition-fast); }
+        .footer__contact-list a:hover { opacity: 0.75; }
+        .footer__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer__copy { font-size: 0.8rem; color: var(--color-text-secondary); }
+        .footer__credit { font-size: 0.8rem; color: var(--color-text-secondary); }
+        .footer__credit a { color: var(--color-accent); transition: opacity var(--transition-fast); }
+        .footer__credit a:hover { opacity: 0.75; }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: #FFFFFF;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            z-index: 900;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+            box-shadow: 0 4px 20px rgba(255,255,255,0.12);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: bttPulse 3s ease-in-out infinite;
+        }
+        .back-to-top:hover { transform: translateY(-4px) !important; box-shadow: 0 8px 32px rgba(255,255,255,0.2); }
+        .back-to-top svg { width: 20px; height: 20px; }
+        @keyframes bttPulse {
+            0%,100% { box-shadow: 0 4px 20px rgba(255,255,255,0.12); }
+            50%      { box-shadow: 0 6px 30px rgba(255,255,255,0.22); }
+        }
+
+        /* ===== DEMO BADGE ===== */
+        .demo-badge {
+            position: fixed;
+            top: 76px;
+            right: 1rem;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(8px);
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            z-index: 990;
+        }
+
+        /* ===== FOCUS ===== */
+        :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+
+        /* ===== RESPONSIVE — 1024px ===== */
+        @media (max-width: 1024px) {
+            .services__grid { grid-template-columns: 1fr 1fr; }
+            .services__grid .service-card:nth-child(3) { grid-column: 1/-1; max-width: 520px; margin: 0 auto; }
+            .about__grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about__image { max-width: 580px; margin: 0 auto; }
+            .trust-row { grid-template-columns: repeat(2,1fr); gap: 2rem; }
+            .gallery__grid { grid-template-columns: repeat(3,1fr); grid-template-rows: 300px; }
+            .testimonials__grid { grid-template-columns: 1fr 1fr; }
+            .testimonials__grid .testimonial-card:nth-child(3) { grid-column: 1/-1; max-width: 520px; margin: 0 auto; }
+            .contact__grid { grid-template-columns: 1fr; gap: 3rem; }
+            .footer__top { grid-template-columns: 1fr 1fr; }
+            .footer__top > *:last-child { grid-column: 1/-1; }
+        }
+
+        /* ===== RESPONSIVE — 768px ===== */
+        @media (max-width: 768px) {
+            :root { --spacing-lg: 3rem; --spacing-xl: 4rem; }
+            section { padding: 4rem 0; }
+
+            .navbar__links { display: none; }
+            .hamburger { display: flex; }
+
+            .hero__actions { flex-direction: column; }
+            .hero__actions .btn { width: 100%; }
+
+            .hero__float-v--1 { width: 160px; }
+            .hero__float-v--2 { width: 90px; }
+            .hero__float-v--3 { width: 110px; }
+            .hero__float-v--4 { width: 190px; right: 2%; }
+            .hero__float-v--5 { width: 110px; right: 8%; }
+            .hero__float-v--6 { width: 90px; }
+            .hero__float-v--7 { display: none; }
+
+            .services__grid { grid-template-columns: 1fr; }
+            .services__grid .service-card:nth-child(3) { grid-column: unset; max-width: unset; }
+
+            .trust-row { grid-template-columns: repeat(2,1fr); }
+
+            .gallery__grid { grid-template-columns: 1fr; grid-template-rows: repeat(3,250px); }
+
+            .testimonials__grid { grid-template-columns: 1fr; }
+            .testimonials__grid .testimonial-card:nth-child(3) { grid-column: unset; max-width: unset; }
+
+            .contact__map-wrap iframe { height: 320px; }
+
+            .footer__top { grid-template-columns: 1fr; gap: 2rem; }
+            .footer__top > *:last-child { grid-column: unset; }
+            .footer__bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== DEMO BADGE ===== -->
+<div class="demo-badge" aria-hidden="true">Wersja Demo</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Powrót na górę strony">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+    </svg>
+</button>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu nawigacyjne">
+    <a href="#uslugi">Usługi</a>
+    <a href="#o-nas">O nas</a>
+    <a href="#realizacje">Realizacje</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:+48500767800" class="accent-link">+48 500 767 800</a>
+</div>
+
+<!-- ===== HEADER / NAVBAR ===== -->
+<header>
+    <nav class="navbar" id="navbar" aria-label="Nawigacja główna">
+        <div class="container">
+            <div class="navbar__inner">
+                <a href="#" class="navbar__logo-text" aria-label="VIKER Car Wellness & Spa — strona główna">
+                    VIKER<span class="dot"> ·</span>
+                </a>
+
+                <ul class="navbar__links" role="list">
+                    <li><a href="#uslugi">Usługi</a></li>
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#realizacje">Realizacje</a></li>
+                    <li><a href="#opinie">Opinie</a></li>
+                    <li><a href="#kontakt" class="navbar__cta-link">Kontakt</a></li>
+                </ul>
+
+                <button class="hamburger" id="hamburger" aria-label="Otwórz menu nawigacyjne" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top" aria-label="Sekcja główna">
+        <div class="hero__floating-logos" aria-hidden="true">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--1">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--2">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--3">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--4">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--5">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--6">
+            <img src="img/logo-viker.png" alt="" class="hero__float-v hero__float-v--7">
+        </div>
+
+        <div class="container">
+            <div class="hero__content" id="heroContent">
+                <!-- Logo / brand -->
+                <div class="hero__logo-wrap">
+                    <!-- Gdy logo będzie gotowe: zastąp poniższy div tagiem <img src="img/logo-viker.png" alt="VIKER logo" style="height:70px"> -->
+                    <div class="hero__logo-text">VIKER <span class="hl">CAR WELLNESS & SPA</span></div>
+                </div>
+
+                <p class="hero__badge">Studio Auto Detailingu · Stare Babice pod Warszawą</p>
+
+                <h1 class="hero__title">TWOJE AUTO<br>ZASŁUGUJE<br>NA PERFEKCJĘ</h1>
+
+                <div class="hero__accent-bar" aria-hidden="true"></div>
+
+                <p class="hero__sub">Zabezpieczanie lakieru · Renowacja · Pielęgnacja</p>
+                <p class="hero__location">ul. Warszawska 447 · Koczargi Nowe · 05-082 Stare Babice</p>
+
+                <div class="hero__actions">
+                    <a href="#uslugi" class="btn btn--primary">Poznaj nasze usługi</a>
+                    <a href="tel:+48500767800" class="btn btn--outline" aria-label="Zadzwoń do VIKER: +48 500 767 800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/>
+                        </svg>
+                        Zadzwoń: +48 500 767 800
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll-hint" aria-hidden="true">
+            <span>Przewiń</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="uslugi" aria-labelledby="services-title">
+        <div class="container">
+            <div class="services__header reveal">
+                <p class="section-label">Czym się zajmujemy</p>
+                <h2 class="section-title" id="services-title">NASZE USŁUGI</h2>
+                <div class="accent-line accent-line--center"></div>
+                <p class="section-desc">Trzy filary naszej pracy — każdy oparty na precyzji, doświadczeniu i najlepszych dostępnych materiałach.</p>
+            </div>
+
+            <div class="services__grid">
+                <!-- Karta 1 -->
+                <article class="service-card reveal d1">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                        </svg>
+                    </div>
+                    <p class="service-card__en">Paint Protection</p>
+                    <h3 class="service-card__title">Zabezpieczenie lakieru</h3>
+                    <p class="service-card__desc">Folia ochronna PPF — bezbarwna i matowa. Powłoki ceramiczne i hydrofobowe na szyby oraz felgi. Najskuteczniejsza ochrona przed zarysowaniami, odpryskami i promieniowaniem UV.</p>
+                    <ul class="service-card__list">
+                        <li>Folia PPF Full Body / Full Front / Bikini</li>
+                        <li>Powłoki ceramiczne</li>
+                        <li>Powłoki hydrofobowe</li>
+                        <li>Zmiana wykończenia: połysk → mat</li>
+                    </ul>
+                </article>
+
+                <!-- Karta 2 -->
+                <article class="service-card reveal d2">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+                        </svg>
+                    </div>
+                    <p class="service-card__en">Renovation</p>
+                    <h3 class="service-card__title">Renowacja</h3>
+                    <p class="service-card__desc">Przywracamy lakierowi fabryczny blask. Korekta lakieru, polerowanie, uzupełnianie odprysków — Twoje auto wygląda jak prosto z salonu.</p>
+                    <ul class="service-card__list">
+                        <li>Korekta lakieru jedno- i wieloetapowa</li>
+                        <li>Polerowanie maszynowe</li>
+                        <li>Uzupełnianie odprysków</li>
+                        <li>Odnowa detali i elementów</li>
+                    </ul>
+                </article>
+
+                <!-- Karta 3 -->
+                <article class="service-card reveal d3">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                        </svg>
+                    </div>
+                    <p class="service-card__en">Maintenance</p>
+                    <h3 class="service-card__title">Pielęgnacja</h3>
+                    <p class="service-card__desc">Regularna pielęgnacja to klucz do długowieczności lakieru. Profesjonalne mycie, konserwacja powłok, przyciemnianie szyb.</p>
+                    <ul class="service-card__list">
+                        <li>Mycie detailingowe</li>
+                        <li>Konserwacja powłok ochronnych</li>
+                        <li>Przyciemnianie szyb</li>
+                        <li>Czyszczenie i zabezpieczenie wnętrza</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="o-nas" aria-labelledby="about-title">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__text reveal-left">
+                    <p class="section-label">Nasza historia</p>
+                    <h2 class="section-title" id="about-title">DLACZEGO<br>MY?</h2>
+                    <div class="accent-line"></div>
+                    <p class="section-desc">Za VIKER stoi pasja do motoryzacji i perfekcja w każdym detalu. Każde auto traktujemy indywidualnie — od konsultacji po wydanie pojazdu.</p>
+                    <br>
+                    <p class="section-desc">Nie idziemy na skróty. Używamy najlepszych materiałów i poświęcamy tyle czasu, ile potrzeba, aby efekt był bezkompromisowy.</p>
+                    <br>
+                    <p class="section-desc">Adam osobiście konsultuje każdą usługę i dba o to, aby przy odbiorze dokładnie pokazać wykonaną pracę. Twoje auto w rękach specjalisty — to nie slogan, to nasza zasada.</p>
+                </div>
+
+                <div class="about__image reveal-right">
+                    <!-- Zastąp własnym zdjęciem studia lub Adama przy pracy -->
+                    <img
+                        src="img/ferrari.jpg"
+                        alt="Specjalista VIKER przy pracy — zabezpieczenie auta premium"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <!-- Trust counters -->
+            <div class="trust-row" id="trustRow">
+                <div class="trust-item reveal d1">
+                    <div class="trust-item__num" data-target="6900" data-suffix="+">0+</div>
+                    <div class="trust-item__label">obserwujących na Instagramie</div>
+                </div>
+                <div class="trust-item reveal d2">
+                    <div class="trust-item__num" data-target="600" data-suffix="+">0+</div>
+                    <div class="trust-item__label">zrealizowanych projektów</div>
+                </div>
+                <div class="trust-item reveal d3">
+                    <div class="trust-item__num" data-target="100" data-suffix="%">0%</div>
+                    <div class="trust-item__label">zadowolonych klientów</div>
+                </div>
+                <div class="trust-item reveal d4">
+                    <div class="trust-item__num" data-target="5" data-suffix="+">0+</div>
+                    <div class="trust-item__label">lat doświadczenia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="realizacje" aria-labelledby="gallery-title">
+        <div class="container">
+            <div class="gallery__header reveal">
+                <p class="section-label">Portfolio</p>
+                <h2 class="section-title" id="gallery-title">NASZE REALIZACJE</h2>
+                <div class="accent-line accent-line--center"></div>
+                <p class="section-desc">Każde auto to osobny projekt. Oto kilka wybranych realizacji z naszego studia.</p>
+            </div>
+
+            <div class="gallery__grid" id="galleryGrid">
+                <div class="gallery__item">
+                    <img src="img/bmw.jpg"      alt="BMW — Powłoka ceramiczna" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="img/mercedes.jpg" alt="Mercedes-AMG — Folia PPF matowa" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="img/ferrari.jpg"  alt="Ferrari 812 — Korekta lakieru" loading="lazy">
+                </div>
+            </div>
+
+            <div class="gallery__footer">
+                <a
+                    href="https://www.instagram.com/vikercarwellnessandspa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="gallery__ig-link"
+                    aria-label="Zobacz więcej realizacji VIKER na Instagramie (otwiera nową kartę)"
+                >
+                    Więcej realizacji na naszym Instagramie
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="opinie" aria-labelledby="testimonials-title">
+        <div class="container">
+            <div class="testimonials__header reveal">
+                <p class="section-label">Co mówią klienci</p>
+                <h2 class="section-title" id="testimonials-title">OPINIE KLIENTÓW</h2>
+                <div class="accent-line accent-line--center"></div>
+            </div>
+
+            <div class="testimonials__grid">
+                <article class="testimonial-card reveal d1">
+                    <div class="testimonial-card__quote" aria-hidden="true">"</div>
+                    <div class="testimonial-card__stars" aria-label="Ocena: 5 gwiazdek">
+                        <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                    </div>
+                    <p class="testimonial-card__text">Jakość prac 10/10. Adam super wytłumaczył zakres usługi i wykonał ją w terminie. Przy wydaniu auta szczegółowo pokazał co zostało zrobione. Jestem bardzo zadowolony!</p>
+                    <p class="testimonial-card__author">Klient — PPF Full Body</p>
+                </article>
+
+                <article class="testimonial-card reveal d2">
+                    <div class="testimonial-card__quote" aria-hidden="true">"</div>
+                    <div class="testimonial-card__stars" aria-label="Ocena: 5 gwiazdek">
+                        <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                    </div>
+                    <p class="testimonial-card__text">Poradzą, pomogą wybrać odpowiednie usługi. Nie naciągają na najdroższe rzeczy. Ceny adekwatne do jakości i czasu. Pełen profesjonalizm od pierwszego kontaktu. Polecam!</p>
+                    <p class="testimonial-card__author">Klient — Przyciemnianie szyb &amp; Ceramika</p>
+                </article>
+
+                <article class="testimonial-card reveal d3">
+                    <div class="testimonial-card__quote" aria-hidden="true">"</div>
+                    <div class="testimonial-card__stars" aria-label="Ocena: 5 gwiazdek">
+                        <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
+                    </div>
+                    <p class="testimonial-card__text">Folia nałożona równo, emblematy pasują idealnie. Bardzo dobry kontakt z Adamem. Auto wydane czyste, wszystko dopięte na ostatni guzik. Z czystym sumieniem polecam!</p>
+                    <p class="testimonial-card__author">Klient — PPF &amp; Powłoka hydrofobowa</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="kontakt" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="contact__header reveal">
+                <p class="section-label">Skontaktuj się z nami</p>
+                <h2 class="section-title" id="contact-title">KONTAKT</h2>
+                <div class="accent-line accent-line--center"></div>
+                <p class="section-desc">Zadzwoń lub napisz, aby omówić zakres usług i umówić termin. Konsultacja i wycena są bezpłatne.</p>
+            </div>
+
+            <div class="contact__grid">
+                <!-- Lewa kolumna: dane kontaktowe -->
+                <div class="contact__info reveal-left">
+                    <!-- Telefon -->
+                    <div class="contact__row">
+                        <div class="contact__icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__row-label">Telefon</p>
+                            <p class="contact__row-value">
+                                <a href="tel:+48500767800" class="phone-big" aria-label="Zadzwoń: +48 500 767 800">+48 500 767 800</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="contact__row">
+                        <div class="contact__icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__row-label">E-mail</p>
+                            <p class="contact__row-value"><a href="mailto:kontakt.viker@gmail.com">kontakt.viker@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Adres -->
+                    <div class="contact__row">
+                        <div class="contact__icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__row-label">Adres</p>
+                            <p class="contact__row-value">ul. Warszawska 447<br>Koczargi Nowe, 05-082 Stare Babice</p>
+                        </div>
+                    </div>
+
+                    <!-- Godziny -->
+                    <div class="contact__row">
+                        <div class="contact__icon-wrap" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__row-label">Godziny otwarcia</p>
+                            <p class="contact__row-value">Pon–Pt: 8:00–18:00</p>
+                            <p class="contact__row-sub">Sobota: 9:00–14:00 &nbsp;|&nbsp; Niedziela: nieczynne</p>
+                        </div>
+                    </div>
+
+                    <!-- Social media -->
+                    <div>
+                        <p class="contact__row-label" style="margin-bottom:1rem;">Znajdź nas</p>
+                        <div class="contact__social-row">
+                            <a href="https://www.instagram.com/vikercarwellnessandspa/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="VIKER na Instagramie (otwiera nową kartę)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/VikerCarWellnessAndSpa/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="VIKER na Facebooku (otwiera nową kartę)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@vikercarwellnessandspa" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="VIKER na TikToku (otwiera nową kartę)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prawa kolumna: mapa -->
+                <div class="contact__map-wrap reveal-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.9!2d20.8735!3d52.2498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471932d6a7c57869%3A0x0!2sul.%20Warszawska%20447%2C%20Koczargi%20Nowe%2C%2005-082%20Stare%20Babice!5e0!3m2!1spl!2spl!4v1711900000000!5m2!1spl!2spl"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="VIKER Car Wellness &amp; Spa — mapa dojazdu, ul. Warszawska 447 Koczargi Nowe"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" aria-label="Stopka strony">
+    <div class="container">
+        <div class="footer__top">
+            <div>
+                <!-- Logo: zastąp img gdy będzie plik -->
+                <div class="footer__brand-name">VIKER <span>CAR</span></div>
+                <p class="footer__tagline">Zabezpieczanie lakieru · Renowacja · Pielęgnacja</p>
+                <p class="footer__tagline" style="margin-top:0.4rem;font-size:0.8rem;">Studio auto detailingu pod Warszawą</p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Nawigacja</h4>
+                <ul class="footer__nav-list">
+                    <li><a href="#uslugi">Nasze usługi</a></li>
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#realizacje">Realizacje</a></li>
+                    <li><a href="#opinie">Opinie klientów</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Dane kontaktowe</h4>
+                <div class="footer__contact-list">
+                    <p><a href="tel:+48500767800">+48 500 767 800</a></p>
+                    <p><a href="mailto:kontakt.viker@gmail.com">kontakt.viker@gmail.com</a></p>
+                    <p style="margin-top:0.5rem;">ul. Warszawska 447<br>Koczargi Nowe, 05-082 Stare Babice</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">© 2026 VIKER Car Wellness &amp; Spa. Wszelkie prawa zastrzeżone.</p>
+            <p class="footer__credit">Strona stworzona przez <a href="#" target="_blank" rel="noopener noreferrer">DigitalAbyss</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    'use strict';
+
+    /* ===== NAVBAR scroll effect ===== */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ===== HAMBURGER / MOBILE MENU ===== */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+
+    function toggleMenu(open) {
+        menuOpen = open;
+        hamburger.classList.toggle('active', open);
+        mobileMenu.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => toggleMenu(!menuOpen));
+
+    mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => toggleMenu(false));
+    });
+
+    /* ===== BACK TO TOP ===== */
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        btt.classList.toggle('visible', window.scrollY > 450);
+    }, { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ===== SCROLL REVEAL (IntersectionObserver) ===== */
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            // Grow any accent-line inside revealed element
+            entry.target.querySelectorAll('.accent-line').forEach(l => l.classList.add('grow'));
+            revealObs.unobserve(entry.target);
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+
+    // Standalone accent lines not inside a reveal element
+    const accentObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('grow'); accentObs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.accent-line').forEach(l => accentObs.observe(l));
+
+    /* ===== GALLERY clip-path reveal ===== */
+    const galleryGrid = document.getElementById('galleryGrid');
+    if (galleryGrid) {
+        const galObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const items = galleryGrid.querySelectorAll('.gallery__item');
+                items.forEach((item, i) => setTimeout(() => item.classList.add('visible'), i * 110));
+                galObs.unobserve(galleryGrid);
+            });
+        }, { threshold: 0.08 });
+        galObs.observe(galleryGrid);
+    }
+
+    /* ===== COUNTER animation ===== */
+    function animateNum(el, target, suffix, duration) {
+        const t0 = performance.now();
+        (function tick(now) {
+            const p = Math.min((now - t0) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+            el.textContent = Math.round(eased * target).toLocaleString('pl-PL') + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+    }
+
+    const trustRow = document.getElementById('trustRow');
+    if (trustRow) {
+        let counted = false;
+        const cntObs = new IntersectionObserver((entries) => {
+            if (!entries[0].isIntersecting || counted) return;
+            counted = true;
+            trustRow.querySelectorAll('[data-target]').forEach(el => {
+                animateNum(el, parseInt(el.dataset.target), el.dataset.suffix || '', 2200);
+            });
+        }, { threshold: 0.3 });
+        cntObs.observe(trustRow);
+    }
+
+    /* ===== HERO CONTENT PARALLAX ===== */
+    const heroContent = document.getElementById('heroContent');
+    const heroSection = document.querySelector('.hero');
+
+    if (heroContent && heroSection) {
+        window.addEventListener('scroll', () => {
+            const sy = window.scrollY;
+            if (sy > heroSection.offsetHeight) return;
+            heroContent.style.transform = `translateY(${sy * 0.12}px)`;
+        }, { passive: true });
+    }
+</script>
+
+</body>
+</html>
